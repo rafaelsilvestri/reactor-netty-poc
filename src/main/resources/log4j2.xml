@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="LogToConsole" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+
+  <Loggers>
+
+    <Logger name="com.github.rafaelsilvestri" level="INFO" additivity="false">
+      <appender-ref ref="LogToConsole"/>
+    </Logger>
+
+    <Logger name="reactor.netty.http.server" level="DEBUG" additivity="false">
+      <appender-ref ref="LogToConsole"/>
+    </Logger>
+
+    <Root level="error">
+      <AppenderRef ref="LogToConsole"/>
+    </Root>
+  </Loggers>
+</Configuration>

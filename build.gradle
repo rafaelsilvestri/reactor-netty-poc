@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group 'com.github.rafaelsilvestri'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'https://repo.spring.io/release' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.11.2")
+    implementation("io.projectreactor.netty:reactor-netty:0.9.1.RELEASE")
+
+    testImplementation("junit:junit4.12");
+}
